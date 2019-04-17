@@ -2,14 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>To do List</title>
+		<title>Natasha's To do List</title>
 
 	</head>
 	<h2>Natasha's To Do List</h2>
 
+	
 	<body>
 
-		<form action="">
+		<form action="/todo" method="POST">
 			Username:
 			<br>
 			<input type="text" name="username" />
@@ -20,11 +21,11 @@
 				</legend>
 				Task Title:
 				<br>
-				<input type="text" name="task-title" />
+				<input type="text" name="todo" />
 				<br>
 				Task Description:
 				<br>
-				<textarea rows="3" cols="30">
+				<textarea name="todoDescription" rows="3" cols="30">
 					
 				</textarea>
 				<br>
@@ -32,27 +33,34 @@
 				<br>
 				<i>Started / In Progress / Completed</i>
 				<br>
-				<input type="text"  name="task-status"/>
+				<input type="text"  name="isDone"/>
 				<br>
 				Task Priority:
 				<br>
 				<i>Low / Medium / High</i>
 				<br>
-				<input type="text" name="task-priority" />
+				<input type="text" name="priority" />
 				<br>
 				Task Deadline:
 				<br>
-				<input type="text" name="task-deadline" />
+				<input type="text" name="deadline" />
 			</fieldset>
 			Attachment?
 			<br>
-			<input type="text" name="attachment" />
+			<input type="text" name="hasAttachment" />
 			<br>
 			<br>
 			<input type="submit" value="Submit" />
 
 		</form>
 
+
+    <h1>Fetch to Do List</h1>
+    <form method="get" action="/todos/">
+        Username<input name="username" /> <br />
+        <input type="submit" value="Fetch All my list" />
+    </form>
+    
 	</body>
 
 </html>
